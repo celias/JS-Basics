@@ -83,7 +83,7 @@ passed to function. */
 
 //Now alert the result of invoking newMyName
 
-      alert(newMyName);
+      //alert(newMyName);
 
 
 //////////////////PROBLEM 7////////////////////
@@ -91,16 +91,22 @@ passed to function. */
 
 
 //Create a function called outerFn which returns an anonymous function which returns your name.
-
-  var outerFn = function () {
-    var anon = function () {
-      anon = name;
-      return name;
-    }
+function outerFn () {
+  return function anon () {
+    return "Gabriella";
   }
+}
+outerFn();
+
+
+
+
+
+
 
 //Now save the result of invoking outerFn into a variable called innerFn.
-
+var innerFn = outerFn();
 
 
 //Now invoke innerFn.
+innerFn();
